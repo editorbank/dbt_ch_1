@@ -3,9 +3,9 @@ dbt_ch_1:
   outputs:
     example:
       type: clickhouse
-      schema: "{{ env_var('CLICKHOUSE_SCHEMA', 'analytics') }}"
-      user: "{{ env_var('CLICKHOUSE_USER', 'clickhouse') }}"
-      password: "{{ env_var('CLICKHOUSE_PASSWORD', 'admin') }}"
+      schema: "{{ env_var('CLICKHOUSE_SCHEMA', 'ch_database') }}"
+      user: "{{ env_var('CLICKHOUSE_USER', 'ch_username') }}"
+      password: "{{ env_var('CLICKHOUSE_PASSWORD', 'ch_password') }}"
       #optional fields
       host: "{{ env_var('CLICKHOUSE_HOST', 'localhost') }}"
       port: "{{ env_var('CLICKHOUSE_PORT', 8123) }}"

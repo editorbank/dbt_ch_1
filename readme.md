@@ -1,13 +1,27 @@
-The dbt project for load CSV-files to DB ClickHouse
+# The dbt project for load CSV-files to DB ClickHouse
 
-### Using the starter project
+## Requirements for the execution environment
+
+- Docker installed and running
+- Python 3 with modules:
+  - venv or virtualenv
+  - pip
+
+## Using the starter project
 
 Try running the following commands:
+
 - dbt run
 - dbt test
 
+## Resources
 
-### Resources:
+### ClickHouse
+
+- [ClickHouse Server Docker Image](https://hub.docker.com/r/clickhouse/clickhouse-server#!)
+
+### DBT
+
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support

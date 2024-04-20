@@ -4,3 +4,18 @@ set -e
 source .venv/bin/activate
 [ -f requirements.txt ] && pip install -r requirements.txt
 
+docker ps -q -f "name=some-clickhouse-server" | xargs -r docker rm -f
+docker inspect some-clickhouse-server >/dev/null \
+  || docker run -d --name some-clickhouse-server \
+    --ulimit nofile=262144:262144 \
+    -v $(realpath ./ch_data):/var/lib/clickhouse/ \
+    -v $(realpath ./ch_logs):/var/log/clickhouse-server/ \
+    -p 8123:8123/tcp \
+    -p 9000:9000/tcp \
+    -e CLICKHOUSE_DB=ch_database \
+    -e CLICKHOUSE_USER=ch_username \
+    -e CLICKHOUSE_PASSWORD=ch_password \
+    -e CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1 \
+    clickhouse/clickhouse-server
+
+docker ps -q -f "name=some-clickhouse-server" | xargs docker inspect -f '{{range $k,$v:=.NetworkSettings.Ports}}{{if eq $k "8123/tcp"}}{{range $v}}{{print .HostPort}}{{end}}{{end}}{{end}}' >chport.bak

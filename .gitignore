@@ -11,3 +11,7 @@ target/
 dbt_packages/
 logs/
 .user.yml
+
+# Clickhouse volumes of docker image
+ch_data/
+ch_logs/
