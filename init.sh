@@ -18,4 +18,4 @@ docker inspect some-clickhouse-server >/dev/null \
     -e CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1 \
     clickhouse/clickhouse-server
 
-docker ps -q -f "name=some-clickhouse-server" | xargs docker inspect -f '{{range $k,$v:=.NetworkSettings.Ports}}{{if eq $k "8123/tcp"}}{{range $v}}{{print .HostPort}}{{end}}{{end}}{{end}}' >chport.bak
+docker ps -q -f "name=some-clickhouse-server" | xargs docker inspect -f '{{range $k,$v:=.NetworkSettings.Ports}}{{if eq $k "8123/tcp"}}{{range $v}}{{print .HostPort}}{{end}}{{end}}{{end}}' >ch_port.tmp

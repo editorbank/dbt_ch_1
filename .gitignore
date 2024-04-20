@@ -1,6 +1,7 @@
 # my:
 *.bak
 *.log
+*.tmp
 
 # python:
 .venv/
