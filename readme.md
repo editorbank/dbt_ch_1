@@ -2,7 +2,7 @@
 
 ## Requirements for the execution environment
 
-- Docker installed and running
+- Podman or Docker installed and worked
 - Python 3 with modules:
   - venv or virtualenv
   - pip
