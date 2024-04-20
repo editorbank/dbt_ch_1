@@ -1,4 +1,12 @@
-.git
-.venv
+# my:
 *.bak
 *.log
+
+# python:
+.venv/
+*.pyc
+
+# dbt:
+target/
+dbt_packages/
+logs/

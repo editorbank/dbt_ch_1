@@ -1,0 +1,14 @@
+dbt_ch_1:
+  target: example
+  outputs:
+    example:
+      type: clickhouse
+      schema: "{{ env_var('CLICKHOUSE_SCHEMA', 'analytics') }}"
+      user: "{{ env_var('CLICKHOUSE_USER', 'clickhouse') }}"
+      password: "{{ env_var('CLICKHOUSE_PASSWORD', 'admin') }}"
+      #optional fields
+      host: "{{ env_var('CLICKHOUSE_HOST', 'localhost') }}"
+      port: "{{ env_var('CLICKHOUSE_PORT', 8123) }}"
+      verify: False
+      secure: False
+      connect_timeout: 10
