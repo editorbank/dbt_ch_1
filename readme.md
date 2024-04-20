@@ -19,6 +19,8 @@ Try running the following commands:
 ### ClickHouse
 
 - [ClickHouse Server Docker Image](https://hub.docker.com/r/clickhouse/clickhouse-server#!)
+- [SHOW Queries](https://clickhouse.com/docs/ru/sql-reference/statements/show)
+- [SHOW CREATE TABLE](https://clickhouse.com/docs/ru/sql-reference/statements/show#show-create-table)
 
 ### DBT
 

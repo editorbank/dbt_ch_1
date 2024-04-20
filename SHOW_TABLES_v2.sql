@@ -1,0 +1,1 @@
+SELECT * FROM system.tables where name like 'my_*' and database like 'ch_database' format JSON
