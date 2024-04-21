@@ -4,3 +4,9 @@ seeds:
   - name: peoples_tab
     config: 
       delimiter: "\t"
+      column_types:
+        Name: String
+        "Job Title": Nullable(String)
+        Address: String (3)
+        State: String
+        City: String
