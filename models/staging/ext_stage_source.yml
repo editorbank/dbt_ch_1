@@ -1,0 +1,10 @@
+sources:
+  - name: my_external_source
+    tables:
+      - name: peoples_tab
+      # - name: my_external_tbl
+        external:
+          # location: "/home/ed/work/dbt_ch_1/tsv"
+          # location: "/home/ed/work/dbt_ch_1/tsv/peoples_tab.csv"
+          location: "@my_stage"
+          file_format: "( type = csv field_delimiter = '\t' record_delimiter = '\n' )"
