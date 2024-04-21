@@ -5,8 +5,8 @@ seeds:
     config: 
       delimiter: "\t"
       column_types:
-        Name: String
+        Name: Nullable(String)
         "Job Title": Nullable(String)
-        Address: String (3)
-        State: String
-        City: String
+        Address: Nullable(String)
+        State: Nullable(String)
+        City: Nullable(String)
