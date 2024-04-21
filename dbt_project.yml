@@ -15,7 +15,7 @@ profile: 'dbt_ch_1'
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["seeds"]
+seed-paths: ["seeds","tsv"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 

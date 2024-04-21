@@ -1,0 +1,6 @@
+version: 2
+
+seeds:
+  - name: peoples_tab
+    config: 
+      delimiter: "\t"
